@@ -2,20 +2,25 @@ import "./App.css";
 import Header from "./Components/Header/Header";
 import Cards from "./Components/Cards/Cards";
 import Footer from "./Components/Footer/Footer";
-import CardsButton from "./Components/CardsButton/CardsButton";
-import React, { useState } from "react";
 
 function App() {
-  const [hidden, setHidden] = useState(false);
-  const clickHandle = () => {
-    setHidden(!hidden);
-  };
+  let cards = [
+    {
+      title: "card 1",
+    },
+    {
+      title: "card 2",
+    },
+    {
+      title: "card 3",
+    },
+  ];
+
   return (
     <div className="App">
       <Header />
       <div className="container">
-        <CardsButton clickFn={clickHandle} hidden={hidden} />
-        {!hidden && <Cards />}
+        <Cards cards={cards} />
       </div>
       <Footer />
     </div>

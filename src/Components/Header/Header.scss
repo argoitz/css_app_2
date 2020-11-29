@@ -23,10 +23,13 @@ nav {
 }
 
 @media all and (max-width: 500px) {
+  .hidden li {
+    display: none;
+  }
+
   nav ul {
-    li {
-      display: none;
-    }
+    display: flex;
+    flex-direction: column-reverse;
     .menu-icon {
       display: block;
       margin-left: auto;
